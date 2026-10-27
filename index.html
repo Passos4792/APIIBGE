@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição no Evento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Inscrição no Evento</h1>
+        <p>Preencha seus dados e escolha o estado e a cidade.</p>
+        <form id="formInscricao">
+            <label for="nome">Nome
+                <input type="text" id="nome" autocomplete="name" required>
+            </label>
+            <label for="email">E-mail
+                <input type="email" id="email" autocomplete="email" required>
+            </label>
+            <label for="estado">Estado
+                <select id="estado" required disabled>
+                    <option value="">Carregando estados...</option>
+                </select>
+            </label>
+            <label for="cidade">Cidade
+                <select id="cidade" required disabled>
+                    <option value="">Escolha um estado primeiro</option>
+                </select>
+            </label>
+            <button type="submit" id="inscrever" disabled>Inscrever</button>
+        </form>
+        <p id="qtdCidades" aria-live="polite"></p>
+        <p id="mensagem" class="erro" role="status"></p>
+        <button id="tentarNovamente" type="button" hidden>Tentar novamente</button>
+        <div id="resumo" role="status"></div>
+        <p class="nota">Atividade demonstrativa: a inscrição é exibida somente nesta página.</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
